@@ -1,6 +1,6 @@
 <?php
 
-namespace Encore\Cropper;
+namespace Igwen6w\Cropper;
 
 use Encore\Admin\Form\Field\ImageField;
 use Encore\Admin\Form\Field\File;
@@ -15,20 +15,21 @@ class Crop extends File
 
     private $ratioH = 100;
 
-    protected $view = 'laravel-admin-cropper::cropper';
+    protected $view = 'igwen6w-cropper::cropper';
 
     protected static $css = [
-        '/vendor/laravel-admin-ext/cropper/cropper.min.css',
+        '/vendor/igwen6w/cropper/cropperjs-1.5.13/dist/cropper.min.css',
     ];
 
     protected static $js = [
-        '/vendor/laravel-admin-ext/cropper/cropper.min.js',
-        '/vendor/laravel-admin-ext/cropper/layer/layer.js'
+        '/vendor/igwen6w/cropper/cropperjs-1.5.13/dist/cropper.min.js',
+        '/vendor/igwen6w/cropper/layer/layer.js'
     ];
 
     protected function preview()
     {
-        return $this->objectUrl($this->value());
+        if(!is_null($this->value()))
+            return $this->objectUrl($this->value());
     }
 
     /**
@@ -69,7 +70,7 @@ class Crop extends File
         } else if (preg_match('/data:image\/.*?;base64/is',$base64)) {
             //检查是否是base64编码
             //base64转图片缓存 返回的是绝对路径
-            $image = $this->base64_image_content($base64,public_path('uploads/base64img_cache'));
+            $image = $this->base64_image_content($base64,storage_path('app/public/images/base64img_cache'));
             if ($image !== false) {
                 $image = new UploadedFile($image['path'],$image['filename']);
                 $this->name = $this->getStoreName($image);

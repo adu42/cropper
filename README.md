@@ -12,12 +12,12 @@ cropper extension for laravel-admin
 ## 安装
 
 ```bash
-composer require laravel-admin-ext/cropper
+composer require igwen6w/cropper
 ```
 
 然后使用artisan 命令发布资源
 ```bash
-php artisan vendor:publish --provider='Encore\Cropper\CropperServiceProvider' --force
+php artisan vendor:publish --provider='Igwen6w\Cropper\CropperServiceProvider' --force
 ```
 
 ## 配置

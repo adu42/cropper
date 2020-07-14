@@ -1,6 +1,6 @@
 <?php
 
-namespace Encore\Cropper;
+namespace Igwen6w\Cropper;
 
 use Encore\Admin\Admin;
 use Encore\Admin\Form;
@@ -18,15 +18,17 @@ class CropperServiceProvider extends ServiceProvider
         }
 
         if ($views = $extension->views()) {
-            $this->loadViewsFrom($views, 'laravel-admin-cropper');
+            $this->loadViewsFrom($views, 'igwen6w-cropper');
         }
 
         if ($this->app->runningInConsole() && $assets = $extension->assets()) {
             $this->publishes(
-                [$assets => public_path('vendor/laravel-admin-ext/cropper')],
-                'laravel-admin-cropper'
+                [$assets => public_path('vendor/igwen6w/cropper')],
+                'igwen6w-cropper'
             );
-            $this->publishes([__DIR__.'/../resources/lang' => resource_path('lang')], 'laravel-admin-cropper-lang');
+            $this->publishes([
+                __DIR__.'/../resources/lang' => resource_path('lang')
+            ], 'igwen6w-cropper-lang');
         }
 
         Admin::booting(function () {

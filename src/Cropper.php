@@ -1,12 +1,12 @@
 <?php
 
-namespace Encore\Cropper;
+namespace Igwen6w\Cropper;
 
 use Encore\Admin\Extension;
 
 class Cropper extends Extension
 {
-    public $name = 'laravel-admin-cropper';
+    public $name = 'igwen6w-cropper';
 
     public $views = __DIR__.'/../resources/views';
 
