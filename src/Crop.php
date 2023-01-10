@@ -130,6 +130,12 @@ class Crop extends File
             var w = $(cropperFileE).attr('data-w');
             var h = $(cropperFileE).attr('data-h');
             var cropperImg = '<div id="cropping-div"><img id="cropping-img" src="'+imgSrc+'"><\/div>';
+            var options = {
+                aspectRatio: w / h,
+                viewMode: 2,
+            };
+            var image = document.getElementById('cropping-img');
+            var cropper = new Cropper(image, options);
             //生成弹层模块
             layer.open({
                 zIndex: 3000,
@@ -142,8 +148,8 @@ class Crop extends File
                 shadeClose: false, //关闭遮罩关闭
                 title: '$cTitle',
                 content: cropperImg,
-                btn: ['$cDone','$cOrigin','$cClear'],
-                btn1: function(){
+                btn: ['$cDone','$cOrigin','$cClear','设置比例','3:2', '16:9', '2:1', '15:7', '16:5'],
+                btn0: function(){
                     var cas = cropper.getCroppedCanvas({
                         width: w,
                         height: h
@@ -159,7 +165,7 @@ class Crop extends File
                     cropper.destroy();
                     layer.closeAll('page');
                 },
-                btn2:function(){
+                btn1:function(){
                     //默认关闭框
                     cropperFileE.nextAll('.cropper-img').attr('src',imgSrc);
                     //替换提交数据
@@ -167,7 +173,7 @@ class Crop extends File
                     //销毁剪裁器实例
                     cropper.destroy();
                 },
-                btn3:function(){
+                btn2:function(){
                     //清空表单和选项
                     //销毁剪裁器实例
                     cropper.destroy();
@@ -178,14 +184,38 @@ class Crop extends File
                     cropperFileE.nextAll('.cropper-input').val('');
                     //清空文件选择器
                     cropperFileE.val('');
+                },
+                // 设置比例
+                btn3:function(){
+                }
+                // 比例 3:2
+                btn4:function(){
+                    options['aspectRatio'] = 1.5;
+                    cropper = new Cropper(image, options);
+                },
+                // 16:9
+                btn5:function(){
+                    options['aspectRatio'] = 1.77777777;
+                    cropper = new Cropper(image, options);
+                }
+                // 2:1
+                btn6:function(){
+                    options['aspectRatio'] = 2;
+                    cropper = new Cropper(image, options);
+                }
+                // 15:7
+                btn7:function(){
+                    options['aspectRatio'] = 2.142857;
+                    cropper = new Cropper(image, options);
+                }
+                // 16:5
+                btn8:function(){
+                    options['aspectRatio'] = 3.2;
+                    cropper = new Cropper(image, options);
                 }
             });
 
-            var image = document.getElementById('cropping-img');
-            var cropper = new Cropper(image, {
-                aspectRatio: w / h,
-                viewMode: 2,
-            });
+            
         }
 
         //选择按钮
