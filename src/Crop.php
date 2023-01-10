@@ -185,7 +185,7 @@ class Crop extends File
                 },
                 // 设置比例
                 btn4:function(){
-                }
+                },
                 // 比例 3:2
                 btn5:function(){
                     options['aspectRatio'] = 1.5;
