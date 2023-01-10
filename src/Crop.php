@@ -19,6 +19,7 @@ class Crop extends File
 
     protected static $css = [
         '/vendor/igwen6w/cropper/cropperjs-1.5.13/dist/cropper.min.css',
+        '/vendor/igwen6w/cropper/style.min.css',
     ];
 
     protected static $js = [
