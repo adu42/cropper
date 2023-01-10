@@ -186,46 +186,63 @@ class Crop extends File
                 },
                 // 设置比例
                 btn4:function(){
+                    return false;
                 },
                 // 比例 3:2
                 btn5:function(){
+                    cropper.destroy();
                     options['aspectRatio'] = 1.5;
                     cropper = new Cropper(image, options);
+                    return false;
                 },
                 // 16:9
                 btn6:function(){
+                    cropper.destroy();
                     options['aspectRatio'] = 1.77777777;
                     cropper = new Cropper(image, options);
+                    return false;
                 },
                 // 2:1
                 btn7:function(){
+                    cropper.destroy();
                     options['aspectRatio'] = 2;
                     cropper = new Cropper(image, options);
+                    return false;
                 },
                 // 15:7
                 btn8:function(){
+                    cropper.destroy();
                     options['aspectRatio'] = 2.142857;
                     cropper = new Cropper(image, options);
+                    return false;
                 },
                 // 16:5
                 btn9:function(){
+                    cropper.destroy();
                     options['aspectRatio'] = 3.2;
                     cropper = new Cropper(image, options);
+                    return false;
                 },
                 // 4:3
                 btn10:function(){
+                    cropper.destroy();
                     options['aspectRatio'] = 1.333333;
                     cropper = new Cropper(image, options);
+                    return false;
                 },
                 // 1:1
                 btn11:function(){
+                    cropper.destroy();
                     options['aspectRatio'] = 1;
                     cropper = new Cropper(image, options);
+                    return false;
                 },
                 // free
                 btn12:function(){
+                    cropper.destroy();
                     options['aspectRatio'] = NaN;
                     cropper = new Cropper(image, options);
+                    return false;
                 }
             });
             var image = document.getElementById('cropping-img');
