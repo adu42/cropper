@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Encore\\Cropper\\": "src/"
+            "Igwen6w\\Cropper\\": "src/"
         }
     },
     "extra": {
