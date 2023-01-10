@@ -134,8 +134,6 @@ class Crop extends File
                 aspectRatio: w / h,
                 viewMode: 2,
             };
-            var image = document.getElementById('cropping-img');
-            var cropper = new Cropper(image, options);
             //生成弹层模块
             layer.open({
                 zIndex: 3000,
@@ -229,8 +227,8 @@ class Crop extends File
                     cropper = new Cropper(image, options);
                 }
             });
-
-            
+            var image = document.getElementById('cropping-img');
+            var cropper = new Cropper(image, options);
         }
 
         //选择按钮
