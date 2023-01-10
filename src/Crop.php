@@ -141,14 +141,14 @@ class Crop extends File
                 zIndex: 3000,
                 type: 1,
                 skin: 'layui-layer-demo', //样式类名
-                area: ['800px', '600px'],
+                area: ['1200px', '600px'],
                 closeBtn: 2, //第二种关闭按钮
                 anim: 2,
                 resize: false,
                 shadeClose: false, //关闭遮罩关闭
                 title: '$cTitle',
                 content: cropperImg,
-                btn: ['$cDone','$cOrigin','$cClear','设置比例','3:2', '16:9', '2:1', '15:7', '16:5'],
+                btn: ['$cDone','$cOrigin','$cClear','设置比例','3:2', '16:9', '2:1', '15:7', '16:5', '4:3', '1:1', 'Free'],
                 btn0: function(){
                     var cas = cropper.getCroppedCanvas({
                         width: w,
@@ -186,31 +186,46 @@ class Crop extends File
                     cropperFileE.val('');
                 },
                 // 设置比例
-                btn3:function(){
+                btnSet:function(){
                 }
                 // 比例 3:2
-                btn4:function(){
+                btn3_2:function(){
                     options['aspectRatio'] = 1.5;
                     cropper = new Cropper(image, options);
                 },
                 // 16:9
-                btn5:function(){
+                btn16_9:function(){
                     options['aspectRatio'] = 1.77777777;
                     cropper = new Cropper(image, options);
-                }
+                },
                 // 2:1
-                btn6:function(){
+                btn2_1:function(){
                     options['aspectRatio'] = 2;
                     cropper = new Cropper(image, options);
-                }
+                },
                 // 15:7
-                btn7:function(){
+                btn15_7:function(){
                     options['aspectRatio'] = 2.142857;
                     cropper = new Cropper(image, options);
-                }
+                },
                 // 16:5
-                btn8:function(){
+                btn16_5:function(){
                     options['aspectRatio'] = 3.2;
+                    cropper = new Cropper(image, options);
+                },
+                // 4:3
+                btn4_3:function(){
+                    options['aspectRatio'] = 1.333333;
+                    cropper = new Cropper(image, options);
+                },
+                // 1:1
+                btn1_1:function(){
+                    options['aspectRatio'] = 1;
+                    cropper = new Cropper(image, options);
+                },
+                // free
+                btnFree:function(){
+                    options['aspectRatio'] = NaN;
                     cropper = new Cropper(image, options);
                 }
             });
