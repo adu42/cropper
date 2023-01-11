@@ -17,18 +17,18 @@ class CropperServiceProvider extends ServiceProvider
             return ;
         }
 
-        if ($views = $extension->views()) {
-            $this->loadViewsFrom($views, 'igwen6w-cropper');
-        }
+//        if ($views = $extension->views()) {
+//            $this->loadViewsFrom($views, 'igwen6w-cropper');
+//        }
 
         if ($this->app->runningInConsole() && $assets = $extension->assets()) {
             $this->publishes(
                 [$assets => public_path('vendor/igwen6w/cropper')],
                 'igwen6w-cropper'
             );
-            $this->publishes([
-                __DIR__.'/../resources/lang' => resource_path('lang')
-            ], 'igwen6w-cropper-lang');
+//            $this->publishes([
+//                __DIR__.'/../resources/lang' => resource_path('lang')
+//            ], 'igwen6w-cropper-lang');
         }
 
         Admin::booting(function () {
