@@ -17,6 +17,7 @@ class MultipleCrop extends MultipleImage
     ];
 
     protected static $js = [
+        '/vendor/igwen6w/bootstrap-fileinput/js/fileinput.min.js',
         '/vendor/igwen6w/cropper/cropperjs-1.5.13/dist/cropper.min.js',
         '/vendor/igwen6w/cropper/main.js',
     ];
