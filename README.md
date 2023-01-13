@@ -1,8 +1,8 @@
 cropper extension for laravel-admin
 ======
 
-这是一个`laravel-admin`扩展，基于`Encore\Admin\Form\Field\Image`开发，
-将`cropperjs`集成进`laravel-admin`的表单图片组件中，选择上传图片后可进行自由裁切；
+这是一个`laravel-admin`扩展，可自由裁切图片，
+基于组件`Encore\Admin\Form\Field\Image` 、 `\Encore\Admin\Form\Field\MultipleImage`和`cropperjs`包开发。
 
 ## 截图
 
@@ -30,6 +30,10 @@ php artisan vendor:publish --provider='Igwen6w\Cropper\CropperServiceProvider' -
         
             // 如果要关掉这个扩展，设置为false
             'enable' => true,
+        ],
+        'multipleCropper' => [
+            // 多图裁切
+            'enable' => true,
         ]
     ]
 ```
@@ -39,10 +43,12 @@ php artisan vendor:publish --provider='Igwen6w\Cropper\CropperServiceProvider' -
 在form表单中使用它：
 ```php
 $form->cropper('content','label');
+$form->multipleCropper('content','label');
 ```
 默认模式是自由剪裁模式，可使用 aspectRation 方法，设置裁切比例；
 ```php
 $form->cropper('content','label')->aspectRation($aspect_ration);
+$form->multipleCropper('content','label')->aspectRation($aspect_ration);
 ```
 
 License
