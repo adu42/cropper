@@ -33,6 +33,7 @@ class CropperServiceProvider extends ServiceProvider
 
         Admin::booting(function () {
             Form::extend('cropper', Crop::class);
+            Form::extend('multipleCropper', MultipleCrop::class);
         });
     }
 }
