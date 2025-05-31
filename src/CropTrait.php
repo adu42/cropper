@@ -1,6 +1,6 @@
 <?php
 
-namespace Encore\Cropper;
+namespace Adu42\Cropper;
 
 trait CropTrait
 {
