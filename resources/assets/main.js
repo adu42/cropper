@@ -14,11 +14,11 @@ function runCropper(el){
             let img = $(elem).find("img.file-preview-image").first();
             let actions = $(elem).find("div.kv-zoom-actions").first();
             if (actions.length) {
-                if (actions.find('button#btn-igwen6w-cropper').length) {
+                if (actions.find('button#btn-encore-cropper').length) {
                     return;
                 }
                 // 裁剪按钮
-                let btnCrop = $("<button id='btn-igwen6w-cropper' type='button' class='kv-file-zoom btn btn-sm btn-kv btn-default btn-outline-secondary'"+
+                let btnCrop = $("<button id='btn-encore-cropper' type='button' class='kv-file-zoom btn btn-sm btn-kv btn-default btn-outline-secondary'"+
                     " title='Cortar la imagen'><span class='glyphicon glyphicon-scissors'></span></button>");
                 btnCrop.on("click", function(event) {
                     if ($(this).attr('disable')) {return;}
