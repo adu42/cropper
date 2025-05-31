@@ -1,12 +1,12 @@
 <?php
 
-namespace Igwen6w\Cropper;
+namespace Encore\Cropper;
 
 use Encore\Admin\Extension;
 
 class Cropper extends Extension
 {
-    public $name = 'igwen6w-cropper';
+    public $name = 'encore-cropper';
 
 //    public $views = __DIR__.'/../resources/views';
 
