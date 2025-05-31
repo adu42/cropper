@@ -1,6 +1,6 @@
 <?php
 
-namespace Igwen6w\Cropper;
+namespace Encore\Cropper;
 
 use Encore\Admin\Admin;
 use Encore\Admin\Form;
@@ -18,17 +18,17 @@ class CropperServiceProvider extends ServiceProvider
         }
 
 //        if ($views = $extension->views()) {
-//            $this->loadViewsFrom($views, 'igwen6w-cropper');
+//            $this->loadViewsFrom($views, 'encore-cropper');
 //        }
 
         if ($this->app->runningInConsole() && $assets = $extension->assets()) {
             $this->publishes(
-                [$assets => public_path('vendor/igwen6w/cropper')],
-                'igwen6w-cropper'
+                [$assets => public_path('vendor/encore/cropper')],
+                'encore-cropper'
             );
 //            $this->publishes([
 //                __DIR__.'/../resources/lang' => resource_path('lang')
-//            ], 'igwen6w-cropper-lang');
+//            ], 'encore-cropper-lang');
         }
 
         Admin::booting(function () {
