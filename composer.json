@@ -1,14 +1,14 @@
 {
-    "name": "adu42/cropper",
+    "name": "laravel-admin-ext/cropper",
     "description": "Integrate Cropper into laravel-admin",
     "type": "library",
     "keywords": ["laravel-admin", "extension","cropper","image"],
-    "homepage": "https://github.com/igwen6w/cropper",
+    "homepage": "https://github.com/adu42/cropper",
     "license": "MIT",
     "authors": [
         {
-            "name": "igwen6w",
-            "email": "igwen6w@gmail.com"
+            "name": "adu42",
+            "email": "doorla@qq.com"
         }
     ],
     "require": {
