@@ -1,6 +1,6 @@
 <?php
 
-namespace Igwen6w\Cropper;
+namespace Encore\Cropper;
 
 trait CropTrait
 {
