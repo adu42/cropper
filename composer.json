@@ -1,5 +1,5 @@
 {
-    "name": "igwen6w/cropper",
+    "name": "laravel-admin-ext/cropper",
     "description": "Integrate Cropper into laravel-admin",
     "type": "library",
     "keywords": ["laravel-admin", "extension","cropper","image"],
@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Igwen6w\\Cropper\\": "src/"
+            "Encore\\Cropper\\": "src/"
         }
     },
     "extra": {
