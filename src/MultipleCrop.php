@@ -1,6 +1,6 @@
 <?php
 
-namespace Encore\Cropper;
+namespace Adu42\Cropper;
 
 use Encore\Admin\Form\Field\MultipleImage;
 use Illuminate\Support\Arr;
@@ -12,14 +12,14 @@ class MultipleCrop extends MultipleImage
     protected $aspect_ration = 1.777778;
 
     protected static $css = [
-        '/vendor/encore/cropper/cropperjs-1.5.13/dist/cropper.min.css',
-        '/vendor/encore/cropper/main.css',
+        '/vendor/adu42/cropper/cropperjs-1.5.13/dist/cropper.min.css',
+        '/vendor/adu42/cropper/main.css',
     ];
 
     protected static $js = [
-        '/vendor/encore/bootstrap-fileinput/js/fileinput.min.js',
-        '/vendor/encore/cropper/cropperjs-1.5.13/dist/cropper.min.js',
-        '/vendor/encore/cropper/main.js',
+        '/vendor/adu42/bootstrap-fileinput/js/fileinput.min.js',
+        '/vendor/adu42/cropper/cropperjs-1.5.13/dist/cropper.min.js',
+        '/vendor/adu42/cropper/main.js',
     ];
 
 
