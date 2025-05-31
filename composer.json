@@ -25,7 +25,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Igwen6w\\Cropper\\CropperServiceProvider"
+                "Encore\\Cropper\\CropperServiceProvider"
             ]
 
         }
