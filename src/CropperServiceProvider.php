@@ -1,6 +1,6 @@
 <?php
 
-namespace Encore\Cropper;
+namespace Adu42\Cropper;
 
 use Encore\Admin\Admin;
 use Encore\Admin\Form;
@@ -23,7 +23,7 @@ class CropperServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole() && $assets = $extension->assets()) {
             $this->publishes(
-                [$assets => public_path('vendor/encore/cropper')],
+                [$assets => public_path('vendor/adu42/cropper')],
                 'encore-cropper'
             );
 //            $this->publishes([
